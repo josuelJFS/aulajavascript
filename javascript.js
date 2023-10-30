@@ -1,11 +1,11 @@
-let anoAtual = 2023;
-let anoNascimento = 0;
-let resultado = 0;
+let idade = 0;
 
-anoNascimento = prompt("digite o ano de nascimento");
+idade = parseInt(prompt("informe sua idade"));
 
-anoNascimento = parseInt(anoNascimento);
-
-resultado = anoAtual - anoNascimento;
-
-alert("você tem: " + resultado + " anos porque nasceu em " + anoNascimento);
+if (idade >= 18) {
+  //entao faça isso
+  alert("você é maior de idade");
+} else {
+  //se não faça isso
+  alert("você não é maior de idade");
+}
