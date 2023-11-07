@@ -1,9 +1,8 @@
-let anoNascimento = 0;
+let objetoInformacaoPessoal = {
+  nome: "josuel fernandes",
+  idade: 29,
+  cpf: 12345678,
+  coresPreferidas: ["vermelho", "preto", "verde"],
+};
 
-anoNascimento = parseInt(prompt("digite o ano de nascimento"));
-
-function minhaIdade(nascimento) {
-  alert(2023 - nascimento);
-}
-
-minhaIdade(anoNascimento);
+console.log(objetoInformacaoPessoal.coresPreferidas[1]);
