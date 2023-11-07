@@ -1,19 +1,9 @@
-let arrayCores = [
-  "vermelho",
-  "azul",
-  "verde",
-  "amarelo",
-  "roxo",
-  "laranja",
-  "rosa",
-  "marrom",
-  "cinza",
-  "preto",
-  "branco",
-];
-let numeroLista = 0;
+let anoNascimento = 0;
 
-arrayCores.forEach((cor) => {
-  numeroLista++;
-  console.log("cor " + numeroLista + " = " + cor);
-});
+anoNascimento = parseInt(prompt("digite o ano de nascimento"));
+
+function minhaIdade(nascimento) {
+  alert(2023 - nascimento);
+}
+
+minhaIdade(anoNascimento);
