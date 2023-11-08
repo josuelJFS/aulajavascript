@@ -1,8 +1,13 @@
-let objetoInformacaoPessoal = {
-  nome: "josuel fernandes",
-  idade: 29,
-  cpf: 12345678,
-  coresPreferidas: ["vermelho", "preto", "verde"],
-};
+function load() {
+  let inputNome = document.getElementById("nome");
+  let btn = document.getElementById("btn");
+  let exibirNome = document.getElementById("exibirNome");
 
-console.log(objetoInformacaoPessoal.coresPreferidas[1]);
+  btn.onclick = function () {
+    exibirNome.innerText = inputNome.value;
+  };
+}
+
+window.onload = function () {
+  load();
+};
