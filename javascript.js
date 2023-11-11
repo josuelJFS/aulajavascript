@@ -1,14 +1,9 @@
-function main() {
-  let anoNascimento = 0;
-  let btn = document.getElementById("btn");
-  anoNascimento = document.getElementById("anoNascimentoInput");
-
-  btn.onclick = function () {
-    let idade = 2023 - parseInt(anoNascimento.value);
-    document.getElementById("resultado").innerText =
-      "sua idade é " + idade + " anos";
-  };
+function alertaBtn() {
+  let input = document.getElementById("nome");
+  document.body.style.backgroundColor = input.value;
 }
+
+function main() {}
 
 window.onload = function () {
   main();
