@@ -9,21 +9,28 @@
   </head>
   <body>
     <main>
+      <h1>aluno passou ?</h1>
       <div id="containerInputs">
-        <h1>Calculadora</h1>
-        <input id="input1" placeholder="Informe um número" type="number" />
-        <input id="input2" placeholder="informe outro número" type="number" />
-        <div id="containerBtn">
-          <select id="operacoes">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-          </select>
-          <button onclick="calculadora()" id="btn">Calcular</button>
+        <div class="containerInputWithTitle">
+          <div>nota1</div>
+          <input id="nota1" type="number" />
         </div>
-        <div id="resultado">0</div>
+        <div class="containerInputWithTitle">
+          <div>nota2</div>
+          <input id="nota2" type="number" />
+        </div>
+        <div class="containerInputWithTitle">
+          <div>nota3</div>
+          <input id="nota3" type="number" />
+        </div>
+        <div class="containerInputWithTitle">
+          <div>nota4</div>
+          <input id="nota4" type="number" />
+        </div>
       </div>
+      <button onclick="mediaDoAluno()" id="btn">Calcular</button>
+      <div id="notaDoaluno"></div>
+      <div id="resultado"></div>
     </main>
   </body>
 </html>
