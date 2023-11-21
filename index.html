@@ -9,28 +9,30 @@
   </head>
   <body>
     <main>
-      <h1>aluno passou ?</h1>
-      <div id="containerInputs">
-        <div class="containerInputWithTitle">
-          <div>nota1</div>
-          <input id="nota1" type="number" />
+      <div id="container">
+        <h1 id="titulo">Aluno passou ?</h1>
+        <div id="containerInputs">
+          <div class="containerInput">
+            <div>nota1</div>
+            <input id="nota1" type="number" />
+          </div>
+          <div class="containerInput">
+            <div>nota2</div>
+            <input id="nota2" type="number" />
+          </div>
+          <div class="containerInput">
+            <div>nota3</div>
+            <input id="nota3" type="number" />
+          </div>
+          <div class="containerInput">
+            <div>nota4</div>
+            <input id="nota4" type="number" />
+          </div>
         </div>
-        <div class="containerInputWithTitle">
-          <div>nota2</div>
-          <input id="nota2" type="number" />
-        </div>
-        <div class="containerInputWithTitle">
-          <div>nota3</div>
-          <input id="nota3" type="number" />
-        </div>
-        <div class="containerInputWithTitle">
-          <div>nota4</div>
-          <input id="nota4" type="number" />
-        </div>
+        <button onclick="media()" id="btn">Calcular</button>
+        <div id="media"></div>
+        <div id="resultado"></div>
       </div>
-      <button onclick="mediaDoAluno()" id="btn">Calcular</button>
-      <div id="notaDoaluno"></div>
-      <div id="resultado"></div>
     </main>
   </body>
 </html>
