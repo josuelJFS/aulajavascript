@@ -3,36 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>javascript</title>
-    <script src="./javascript.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Speech Synthesis</title>
   </head>
   <body>
-    <main>
-      <div id="container">
-        <h1 id="titulo">Aluno passou ?</h1>
-        <div id="containerInputs">
-          <div class="containerInput">
-            <div>nota1</div>
-            <input id="nota1" type="number" />
-          </div>
-          <div class="containerInput">
-            <div>nota2</div>
-            <input id="nota2" type="number" />
-          </div>
-          <div class="containerInput">
-            <div>nota3</div>
-            <input id="nota3" type="number" />
-          </div>
-          <div class="containerInput">
-            <div>nota4</div>
-            <input id="nota4" type="number" />
-          </div>
-        </div>
-        <button onclick="media()" id="btn">Calcular</button>
-        <div id="media"></div>
-        <div id="resultado"></div>
-      </div>
-    </main>
+    <h1>pergunte algo</h1>
+    <textarea id="text-to-read" rows="4" cols="50"></textarea>
+    <button onclick="synthesizeSpeech()">Reproduzir Resposta</button>
+
+    <script>
+      function synthesizeSpeech() {
+        // Obtém o texto a ser reproduzido
+        var textToRead = document.getElementById("text-to-read").value;
+
+        // Verifica se o navegador suporta a Web Speech API
+        if ("speechSynthesis" in window) {
+          // Cria um objeto de síntese de fala
+          var synthesis = window.speechSynthesis;
+
+          // Cria uma instância de SpeechSynthesisUtterance
+          var utterance = new SpeechSynthesisUtterance(textToRead);
+
+          // Configurações opcionais (velocidade, pitch, etc.)
+          utterance.rate = 1.0; // Velocidade (0.1 a 10)
+          utterance.pitch = 1.0; // Tom (0 a 2)
+
+          // Inicia a reprodução de voz
+          synthesis.speak(utterance);
+        } else {
+          alert(
+            "Seu navegador não suporta a Web Speech API. Experimente em um navegador mais recente."
+          );
+        }
+      }
+    </script>
   </body>
 </html>
